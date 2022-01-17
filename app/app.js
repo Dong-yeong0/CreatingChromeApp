@@ -1,12 +1,11 @@
 const loginInput = document.querySelector("#login-form input");
-const loginButton = document.querySelector("#login-form button");
+const loginForm = document.querySelector("#login-form");
 
-function onLoginBtnClick() {
-    const username = loginInput.value;
-    if(username === "") {
-        alert("Please write your name");
-    } else if(username.length > 15 ) {
-        alert("Your name is too long");
-    }
+// eventListener의 함수 첫번째 argument는 항상 submit의 정보가 된다
+function onLoginSubmit(event) {
+    // .preventDefault - 브라우저의 기본 동작을 막아줌
+    event.preventDefault();
+    console.log(event);
 }
-loginButton.addEventListener("click", onLoginBtnClick);
+// form submit 새로고침은 기본 동작이고 브라우저가 그러도록 프로그래밍이 되어있다.
+loginForm.addEventListener("submit", onLoginSubmit);

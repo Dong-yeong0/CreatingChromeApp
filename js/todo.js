@@ -14,7 +14,9 @@ function saveToDos() {
 function deleteTodo(event) {
     const li = event.target.parentElement;
     li.remove();
-    localStorage.removeItem(TODOS_KEY);
+    
+    toDos = toDos.filter(toDo => toDo.id !== parseInt(li.id));
+    saveToDos();
 }
 
 function paintToDo(newTodo) {
@@ -48,8 +50,6 @@ toDoForm.addEventListener("submit", handleToDoSubmit);
 
 const savedToDos = localStorage.getItem(TODOS_KEY);
 
-console.log(savedToDos);
-
 if(savedToDos !== null) {
     const parsedToDos = JSON.parse(savedToDos);
     // reflash하고 다시 localStorage에 저장시키면 전의 저장값은 없어지고 새로운 값만 들어간다. 그래서 기존에 있던 데이터를 변수에 담아줌
@@ -59,3 +59,8 @@ if(savedToDos !== null) {
 }
 // 이거도 되네
 // sayHello("11111111111111111");
+
+/**
+ * filter(); 
+ * 주어진 함수의 테스트를 통과하는 모든 요소를 모아 새로운 배열로 반환.
+ */

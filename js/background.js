@@ -9,6 +9,7 @@ const choseImage = images[Math.floor(Math.random() * images.length)];
 const bgImage = document.createElement("img");
 
 bgImage.src = `img/${choseImage}`
+bgImage.id = "imgwrap";
 
-document.body.prepend(bgImage);
+document.body.append(bgImage);
 //document.body.attributes("style", `background:${bgImage}`);

@@ -4,26 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/style.css" media="all ">
     <title>App</title>
 </head>
+
 <body>
-    <form id="login-form" class="hidden">
-        <!-- required 비어 있으면 chrome 브라우저에서 자동으로 경고창과 focus 
-            해주고 event.keyCode 13번의 엔터를 눌렀을때 submit이 되는 역할도 해준다.-->
-        <input required maxlength="15" type="text" placeholder="이름" />
-        <button type="submit">Login</button>
-    </form>
-    <h2 id="clock">00:00:00</h2>
-    <h1 id="greeting" class="hidden"></h1>
-    <form id="todo-form">
-        <input type="text" placeholder="Write a To and Press" required />
-    </form>
-    <ul id="todo-list"></ul>
-    <div id="quote">
-        <span></span>
-        <span></span>
+    <div class="header">
+        <div class="header_changeBgImg">
+            change<br>
+            background
+        </div>
+        <div class="hearder_todoList">
+            ToDo List
+        </div>
+        <div class="hearder_reset">
+            Reset
+        </div>
+        <div class="_blank">
+
+        </div>
+        <div id="weather">
+            <span></span>
+            <span></span>
+        </div>
     </div>
+    <div>
+        <form id="login-form" class="hidden">
+        <!-- required 비어 있으면 chrome 브라우저에서 자동으로 경고창과 focus 
+                해주고 event.keyCode 13번의 엔터를 눌렀을때 submit이 되는 역할도 해준다.-->
+            <input required maxlength="15" type="text" placeholder="이름" />
+            <button type="submit">Login</button>
+        </form>
+        <h2 id="clock">00:00:00</h2>
+        <h1 id="greeting" class="hidden"></h1>
+        <form id="todo-form">
+            <input type="text" placeholder="Write a To and Press" required />
+        </form>
+        <ul id="todo-list"></ul>
+    </div>
+    <footer>
+        <div id="quote">
+            <span></span>
+            <span></span>
+        </div>
+    </footer>
+    
     <div id="weather">
         <span></span>
         <span></span>

@@ -1,3 +1,89 @@
+@import "reset.css";
+
+html{
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    font-size: 1.2rem;
+}
+ /* @media (max-width: 360px) {
+     html {
+         font-size: 1.5rem;
+     }
+ } */
 .hidden {
     display : none;
 }
+/* Header*/
+.header {
+    color: white;
+    font-weight: bold;
+    background-color : rgba(26, 26, 26, 0.4);
+    width : 100%;
+    height: 80px;
+    display: flex;
+    font-family: 'Nanum Gothic',sans-serif;
+}
+
+.header>.header_changeBgImg{
+    margin: 20px;
+    margin-left: 3%;
+    cursor : pointer;
+    flex-grow: .5;
+}
+
+.header>._blank {
+    flex-grow: .8;
+}
+.header>
+#weather,
+.hearder_reset,
+.hearder_todoList {
+    margin : 25px;
+    flex-grow: .7;
+}
+
+.header>.header_changeBgImg:active {
+    transform: scale(.90);
+}
+.header>.hearder_reset:active {
+    transform: scale(.90);
+}
+.header>.hearder_todoList:active {
+    transform: scale(.90);
+}
+/* Header*/
+
+/* 뒷 배경 이미지*/
+#imgwrap {
+    position : absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    right: auto;
+    bottom: 0px;
+    z-index: -1;
+    opacity: .8;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* 뒷 배경 이미지*/
+
+
+/* footer */
+
+footer {
+    position : fixed;
+    bottom: -40px;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: center;
+
+}
+
+/* footer */

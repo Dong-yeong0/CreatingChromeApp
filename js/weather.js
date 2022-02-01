@@ -8,10 +8,12 @@ function onGeoSuccess(position) {
     fetch(weatherMapApiUrl)
         .then((response) => response.json())
         .then((data) => {
-            const weather = document.querySelector("#weather span:first-child");
-            const city = document.querySelector("#weather span:last-child");
+            const weather = document.querySelector("#weather");
+            const temp = document.querySelector("#temp");
+            const city = document.querySelector("#city");
             city.innerText = data.name;
-            weather.innerText = `${data.weather[0].main}/${data.main.temp}`;
+            temp.innerText = `${data.main.temp}`;
+            weather.innerText = `${data.weather[0].main}`;
         });
     //console.log(JSON.stringify(weatherMapApiUrl));
 }

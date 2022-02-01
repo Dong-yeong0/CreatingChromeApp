@@ -1,11 +1,34 @@
 @import "reset.css";
 
+@font-face {
+    font-family: "Pretendard-Regular";
+    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "xeicon";
+    src: url("fonts/xeicon.eot?3ka2yj");
+    src: url("fonts/xeicon.eot?3ka2yj#iefix") format("embedded-opentype"),
+        url("fonts/xeicon.woff2?3ka2yj") format("woff2"),
+        url("fonts/xeicon.ttf?3ka2yj") format("truetype"),
+        url("fonts/xeicon.woff?3ka2yj") format("woff"),
+        url("fonts/xeicon.svg?3ka2yj#xeicon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    font-family: "Pretendard-Regular";
+    color: #fff;
+}
 html{
     -webkit-text-size-adjust: none;
     -moz-text-size-adjust: none;
     -ms-text-size-adjust: none;
     -o-text-size-adjust: none;
-    font-size: 1.2rem;
+    font-size: 1.5vw;
 }
  /* @media (max-width: 360px) {
      html {
@@ -21,9 +44,9 @@ html{
     font-weight: bold;
     background-color : rgba(26, 26, 26, 0.4);
     width : 100%;
-    height: 80px;
     display: flex;
-    font-family: 'Nanum Gothic',sans-serif;
+    align-items: center;
+    /*font-family: 'Nanum Gothic',sans-serif;*/
 }
 
 .header>.header_changeBgImg{
@@ -37,7 +60,7 @@ html{
     flex-grow: .8;
 }
 .header>
-#weather,
+#header_weather,
 .hearder_reset,
 .hearder_todoList {
     margin : 25px;
@@ -45,14 +68,26 @@ html{
 }
 
 .header>.header_changeBgImg:active {
-    transform: scale(.90);
+    transform: scale(.97);
 }
 .header>.hearder_reset:active {
-    transform: scale(.90);
+    transform: scale(.97);
 }
 .header>.hearder_todoList:active {
-    transform: scale(.90);
+    transform: scale(.97);
 }
+
+.header>#header_weather {
+    margin-right: 5%;
+}
+
+#weather, #city, #temp{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+
+}
+
 /* Header*/
 
 /* 뒷 배경 이미지*/
@@ -86,7 +121,7 @@ html{
 #login-form input {
     width: 300px;
     height: 80px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     background-color: transparent;
     color: #fff;
     border: 1px solid #fff;
@@ -94,6 +129,7 @@ html{
     text-align: center;
     border: none;
     border-bottom: 5px solid #fff;
+    font-size: 1.2rem;
 }
 
 #login-form input::placeholder {
@@ -118,6 +154,7 @@ html{
     text-transform: uppercase;
     font-weight: bold;
     background-color: white;
+    color: #000;
 }
 
 /* login-form*/
@@ -178,7 +215,7 @@ footer {
     letter-spacing: .4vh;
 }
 #quote span:last-child {
-    font-size: 1vw;
+    font-size: 1.2vw;
     letter-spacing: .5vh;
     opacity: 0.7;
 }

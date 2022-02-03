@@ -5,7 +5,7 @@ const quotes = [
     },
     {
         quote : "가는 디자인 좋아야 오는 프로그램 좋다",
-        author : "",
+        author : "Dong-yeong0",
     },
     {
         quote : "두개의 버그는 한번에 잡을 수 없다.",

@@ -2,6 +2,9 @@ const toDoForm = document.getElementById("todo-form");
 const toDoInput = toDoForm.querySelector("input");
 const toDoList = document.getElementById("todo-list");
 
+const showMoadal = document.querySelector("#change");
+const modelTodo = document.querySelector("main");
+
 const TODOS_KEY = "todos";
 
 let toDos = [];
@@ -63,3 +66,18 @@ if(savedToDos !== null) {
  * filter(); 
  * 주어진 함수의 테스트를 통과하는 모든 요소를 모아 새로운 배열로 반환.
  */
+
+let isModal = true;
+function handleModalChange(){
+    if(isModal){
+        modelTodo.classList.remove('hidden');
+        showMoadal.innerText = 'Hide \nTodo List';
+        isModal = false;
+    }else{
+        modelTodo.classList.add('hidden');
+        showMoadal.innerText = 'Show \nTodo List';
+        isModal = true;
+    }
+}
+
+showMoadal.addEventListener('click', handleModalChange)

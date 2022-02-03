@@ -17,9 +17,15 @@ function onLoginSubmit(event) {
     event.preventDefault();
     loginForm.classList.add(HIDDEN_CLASSNAME);
     const username = loginInput.value;
-    localStorage.setItem(USERNAME_KEY, username);
-    // setItem(key, value)로 저장
-    paintGreetings(username);
+    if(username.length === 0 || username === "" || username === undefined) {
+        alert("이름을 적어주세요.");
+    } else {
+        localStorage.setItem(USERNAME_KEY, username);
+        loginForm.style.display = "none";
+        // setItem(key, value)로 저장
+        paintGreetings(username);
+    }
+    
 }
 
 function paintGreetings(username) {
@@ -32,6 +38,7 @@ function paintGreetings(username) {
         백틱 사이에 표현하고 싶은 변수를 ${} 에 감싸면 끝.
     */
     greeting.innerText = `Hello ${username}`;
+
 }
 
 if(saveUsername === null) {
@@ -39,4 +46,5 @@ if(saveUsername === null) {
     loginForm.addEventListener("submit", onLoginSubmit);
 } else {
     paintGreetings(saveUsername);
+    loginForm.style.display = "none";
 }

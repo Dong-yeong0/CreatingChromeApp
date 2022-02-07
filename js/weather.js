@@ -11,9 +11,9 @@ function onGeoSuccess(position) {
             const weather = document.querySelector("#weather");
             const temp = document.querySelector("#temp");
             const city = document.querySelector("#city");
-            city.innerText = data.name;
-            temp.innerText = `${data.main.temp}`;
-            weather.innerText = `${data.weather[0].main}`;
+            city.innerText = `City : ${data.name}`;
+            temp.innerText = `Temp : ${data.main.temp} °C`;
+            weather.innerText = `Weather : ${data.weather[0].main}`;
         });
     //console.log(JSON.stringify(weatherMapApiUrl));
 }

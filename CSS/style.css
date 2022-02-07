@@ -55,7 +55,7 @@ html{
 }
 
 .header>._blank {
-    flex-grow: .8;
+    flex-grow: 8;
 }
 .header>
 #header_weather,
@@ -64,7 +64,6 @@ html{
     margin : 25px;
     flex-grow: .7;
 }
-
 .header>.header_changeBgImg:active {
     transform: scale(.97);
 }
@@ -76,12 +75,12 @@ html{
 }
 
 .header>#header_weather {
-    margin-right: 7%;
+    margin-right: 3%;
 }
 
 #weather, #city, #temp{
     display: flex;
-    align-items: flex-end;
+    
     flex-direction: column;
 }
 
@@ -175,8 +174,8 @@ html{
     height: 400px;
     display: flex;
     position: fixed;
-    top : 15%;
-    left: 13%;
+    top : 10%;
+    left: 7%;
     align-items: center;
     flex-direction: column;
     margin:2vh,0;
@@ -306,12 +305,12 @@ footer {
 }
 
 #quote span:first-child {
-    font-size: 1.5vw;
+    font-size: 2vh;
     margin-bottom: 0.4vw;
     letter-spacing: .4vh;
 }
 #quote span:last-child {
-    font-size: 1.2vw;
+    font-size: 1.5vh;
     letter-spacing: .5vh;
     opacity: 0.7;
 }
